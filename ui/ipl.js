@@ -12,7 +12,7 @@ $(document).ready(function() {
         div: '#map',
         lat: 0,
         lng: 0,
-        zoom: 1
+        zoom: 2
     });
 
     $.ajax({
@@ -31,6 +31,7 @@ $(document).ready(function() {
             if (Object.keys(response).length == 0) {
                 $('#loading').text('nothing to show :(');
                 $('#map').fadeTo('fast', 0.5);
+                return false;
             }
 
             // Draw IPs on map
