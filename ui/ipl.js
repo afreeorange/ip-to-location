@@ -59,6 +59,10 @@ $(document).ready(function() {
             }
 
             $('#loading').fadeOut();
+
+            if (Object.keys(response).length == 1) {
+                map.setZoom(15);
+            }
         })
         .fail(function() {
             $('#loading').text('failed :(');
