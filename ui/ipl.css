@@ -1,0 +1,141 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "open sans";
+    background: black;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+#loading {
+    text-shadow: 1px 1px 5px #333;
+    position: fixed;
+    width: 200px;
+    height: 50px;
+    color: white;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -25px;
+    opacity: 0.9;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.overlay {
+    display: block;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.95;
+    background: #333;
+    border: solid 3px #333;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #333;
+    text-shadow: 1px 1px 1px #333;
+    padding: 0 4px;
+}
+
+.overlay_arrow {
+    left: 50%;
+    margin-left: -16px;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.overlay_arrow.above {
+    bottom: -15px;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-top: 16px solid #333;
+}
+
+.overlay_arrow.below {
+    top: -15px;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 16px solid #333;
+}
+
+#overlay-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    opacity: 0.8;
+}
+
+#overlay-info table {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 0.8em;
+    text-align: left;
+    vertical-align: top;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#overlay-info table thead tr th {
+    padding: 3px;
+    border-right: 1px dotted #999;
+    border-bottom: 1px dotted #999;
+}
+
+#overlay-info table thead tr th:nth-child(1) {
+    width: 75px;
+}
+
+#overlay-info table thead tr th:nth-child(2) {
+    width: 75px;
+}
+
+#overlay-info table thead tr th:nth-child(4) {
+    width: 125px;
+}
+
+#overlay-info table thead tr th:nth-child(5) {
+    width: 50px;
+}
+
+#overlay-info table thead tr th:nth-child(6) {
+    width: 80px;
+}
+
+#overlay-info table thead tr th:nth-child(7) {
+    width: 150px;
+}
+
+#overlay-info table thead tr th:nth-child(8) {
+    width: 125px;
+}
+
+#overlay-info table tbody tr td {
+    padding: 3px;
+    border-right: 1px dotted #999;
+}
+
+#overlay-info table tbody tr td code {
+    font-size: 1.2em;
+}
+
+@media (max-width: 900px) {
+    #overlay-info table thead tr th:nth-child(1),
+    #overlay-info table thead tr th:nth-child(2),
+    #overlay-info table thead tr th:nth-child(6),
+    #overlay-info table tbody tr td:nth-child(1),
+    #overlay-info table tbody tr td:nth-child(2),
+    #overlay-info table tbody tr td:nth-child(6) {
+        display: none;
+    }
+}
